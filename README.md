@@ -16,6 +16,9 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 
 Dark Mode : [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-acrou/go2index/index.js)
 
+Copy the [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-acrou/go2index/index.js) script to [workers.dev](https://workers.dev) and edit `client_id`, `client_secret`, `refresh_token` with yours
+
+
 ### List View - Dark Mode
 ![](https://i.imgur.com/JocI8O6.png)
 
