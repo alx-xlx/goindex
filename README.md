@@ -7,6 +7,14 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 
 `index.js` is the content of the Workers script.  
 
+
+## Versions
+
+donwa/goindex
+
+Aicirou/goindex-theme
+
+
 ## Themes
 ### material: [https://index.gd.workers.dev/](https://index.gd.workers.dev/)
 
