@@ -17,7 +17,7 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 Dark Mode : [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-acrou/go2index/index.js)
 
 ### List View - Dark Mode
-![](https://i.imgur.com/dhAClKC.png)
+![](https://i.imgur.com/JocI8O6.png)
 
 ### Thumbnail View - Dark Mode
 ![](https://i.imgur.com/dhAClKC.png)
