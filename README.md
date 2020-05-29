@@ -20,10 +20,11 @@ Copy the [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-a
 
 
 ### List View - Dark Mode
-![]()
+![](https://i.imgur.com/Y9pJo1V.png)
 
 ### Thumbnail View - Dark Mode
-![]()
+![](https://i.imgur.com/crg4dGp.gif)
+
 
 ---
 
