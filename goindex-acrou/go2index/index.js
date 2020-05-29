@@ -3,23 +3,23 @@ var authConfig = {
   siteName: "GoIndex", // 网站名称
   version: "production", // 程序版本
   theme: "acrou",
-  // 强烈推荐使用自己的 client_id 和 client_secret
+  // Highly recommend using your own client_id and client_secret
   client_id: "202264815644.apps.googleusercontent.com",
   client_secret: "X4Z3ca8xfWDb1Voo-F9a7ZxJ",
-  refresh_token: "", // 授权 token
+  refresh_token: "", //  token
   /**
-   * 设置要显示的多个云端硬盘；按格式添加多个
-   * [id]: 可以是 团队盘id、子文件夹id、或者"root"（代表个人盘根目录）；
-   * [name]: 显示的名称
-   * [user]: Basic Auth 的用户名
-   * [pass]: Basic Auth 的密码
-   * [protect_file_link]: Basic Auth 是否用于保护文件链接，默认值（不设置时）为 false，即不保护文件链接（方便 直链下载/外部播放 等）
-   * 每个盘的 Basic Auth 都可以单独设置。Basic Auth 默认保护该盘下所有文件夹/子文件夹路径
-   * 【注意】默认不保护文件链接，这样可以方便 直链下载/外部播放;
-   *       如果要保护文件链接，需要将 protect_file_link 设置为 true，此时如果要进行外部播放等操作，需要将 host 替换为 user:pass@host 的 形式
-   * 不需要 Basic Auth 的盘，保持 user 和 pass 同时为空即可。（直接不设置也可以）
-   * 【注意】对于id设置为为子文件夹id的盘将不支持搜索功能（不影响其他盘）。
-   */
+     * Set up multiple Drives to be displayed; add multiples by format
+     * [id]: It can be team disk id, subfolder id, or "root" (representing the root directory of personal disk);
+     * [name]: the displayed name
+     * [user]: Basic Auth username
+     * [pass]: Basic Auth password
+     * [protect_file_link]: Whether Basic Auth is used to protect the file link, the default value (when not set) is false, that is, the file link is not protected (convenient for straight chain download / external playback, etc.)
+     * Basic Auth of each disk can be set separately. Basic Auth protects all folders / subfolders in the disk by default
+     * [Note] By default, the file link is not protected, which can facilitate straight-chain download / external playback;
+     * If you want to protect the file link, you need to set protect_file_link to true. At this time, if you want to perform external playback and other operations, you need to replace host with user: pass @ host
+     * No need for Basic Auth disk, just keep user and pass empty at the same time. (No need to set it directly)
+     * [Note] For the disk whose id is set to the subfolder id, the search function will not be supported (it does not affect other disks).
+  **/
   roots: [
     {
       id: "",
