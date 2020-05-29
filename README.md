@@ -10,13 +10,23 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 
 # Versions
 
+
+
+## [Aicirou/goindex-theme](https://github.com/Aicirou/goindex-theme-acrou)
+
+Dark Mode : [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-acrou/go2index/index.js)
+
+### List View - Dark Mode
+![](https://i.imgur.com/dhAClKC.png)
+
+### Thumbnail View - Dark Mode
+![](https://i.imgur.com/dhAClKC.png)
+
+---
+
 ## donwa/goindex
 
 index.js
-
-## Aicirou/goindex-theme
-
-[index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-acrou/go2index/index.js)
 
 ## Themes
 ### material: [https://index.gd.workers.dev/](https://index.gd.workers.dev/)
