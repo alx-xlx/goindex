@@ -1,7 +1,7 @@
 // =======Options START=======
 var authConfig = {
-  siteName: "GoIndex-theme-acrou", // 网站名称
-  version: "1.1.0", // 程序版本
+  siteName: "GoIndex", // 网站名称
+  version: "production", // 程序版本
   theme: "acrou",
   // 强烈推荐使用自己的 client_id 和 client_secret
   client_id: "202264815644.apps.googleusercontent.com",
@@ -132,7 +132,7 @@ function html(current_drive_order = 0, model = {}) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
   <title>${authConfig.siteName}</title>
   <style>
-    @import url(https://cdn.jsdelivr.net/gh/alx-xlx/goindex@master/goindex-acrou/dist/style.min.css);
+    @import url(https://cdn.jsdelivr.net/gh/alx-xlx/goindex@${authConfig.version}/goindex-acrou/dist/style.css);
   </style>
   <script>
     window.gdconfig = JSON.parse('${JSON.stringify({
@@ -149,7 +149,7 @@ function html(current_drive_order = 0, model = {}) {
 </head>
 <body>
     <div id="app"></div>
-    <script src="https://cdn.jsdelivr.net/gh/alx-xlx/goindex@master/goindex-acrou/dist/app.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alx-xlx/goindex@${authConfig.version}/goindex-acrou/dist/app.js"></script>
 </body>
 </html>
 `;
