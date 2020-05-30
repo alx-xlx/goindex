@@ -50,3 +50,7 @@ a.navbar-item:hover{background-color:#ff3434;color:#fff}
 
 ### Loading Mask
 .el-loading-mask{position:absolute;z-index:2000;background-color:#f3f4f76e;margin:0;top:0;right:0;bottom:0;left:0;transition:opacity .3s}
+
+
+### Smaller Resolution Menubar
+.navbar-menu{background-color:#4b4d52;box-shadow:0 8px 16px rgba(10,10,10,.1);padding:.5rem 0}
