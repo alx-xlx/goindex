@@ -14,11 +14,11 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 
 ## 1. [Aicirou/goindex-theme](https://github.com/Aicirou/goindex-theme-acrou)
 
-Worker Script (Dark Mode) : [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-acrou/go2index/index.js)
+Worker Script (Dark Mode) : [index.js](https://github.com/alx-xlx/goindex/blob/dark-mode-0-1/goindex-acrou/go2index/index.js)
 
 Demo - [goindex.teamsdrives.workers.dev](https://goindex.teamsdrives.workers.dev)
 
-Copy the [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-acrou/go2index/index.js) script to [workers.dev](https://workers.cloudflare.com/) and edit `client_id`, `client_secret`, `refresh_token` with yours
+Copy the [index.js](https://github.com/alx-xlx/goindex/blob/dark-mode-0-1/goindex-acrou/go2index/index.js) script to [workers.dev](https://workers.cloudflare.com/) and edit `client_id`, `client_secret`, `refresh_token` with yours
 
 OR
 
@@ -40,13 +40,13 @@ Simply visit [this](https://goindex.glitch.me/) Modified (only for Dark Mode) ve
 ---
 ## 2. [maple3142/GDIndex](https://github.com/maple3142/GDIndex)
 ---
-Worker Script - [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-vue.js)
+Worker Script - [index.js](https://github.com/alx-xlx/goindex/blob/dark-mode-0-1/goindex-vue.js)
 
 Demo - [gdindex-dark.teamsdrives.workers.dev](https://gdindex-dark.teamsdrives.workers.dev)
 
 ## 3. donwa/goindex
 
-Workers Script - [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex.js)
+Workers Script - [index.js](https://github.com/alx-xlx/goindex/blob/dark-mode-0-1/goindex.js)
 
 ## Themes
 
