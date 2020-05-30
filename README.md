@@ -12,11 +12,11 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 
 
 
-## [Aicirou/goindex-theme](https://github.com/Aicirou/goindex-theme-acrou)
+## 1. [Aicirou/goindex-theme](https://github.com/Aicirou/goindex-theme-acrou)
 
 Dark Mode : [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-acrou/go2index/index.js)
 
-Copy the [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-acrou/go2index/index.js) script to [workers.dev](https://workers.dev) and edit `client_id`, `client_secret`, `refresh_token` with yours
+Copy the [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-acrou/go2index/index.js) script to [workers.dev](https://workers.cloudflare.com/) and edit `client_id`, `client_secret`, `refresh_token` with yours
 
 OR
 
@@ -26,17 +26,22 @@ https://goindex.glitch.me/
 Simply visit [this](https://goindex.glitch.me/) Modified (only for Dark Mode) version to automatically generate your `index.js` without having to manually edit anything.
 
 ### List View - Dark Mode
-![](https://i.imgur.com/Y9pJo1V.png)
+![goindex-list](https://i.imgur.com/Y9pJo1V.png)
 
 ### Thumbnail View - Dark Mode
-![](https://i.imgur.com/crg4dGp.gif)
+![goindex-thumbnail](https://i.imgur.com/crg4dGp.gif)
+
+### Toggle View
+![goindex-toggle-view](https://i.imgur.com/RdvgfIf.png)
 
 
 ---
+## 2. [maple3142/GDIndex](https://github.com/maple3142/GDIndex)
+---
 
-## donwa/goindex
+## 3. donwa/goindex
 
-index.js
+[index.js](https://github.com/alx-xlx/goindex/blob/production/goindex.js)
 
 ## Themes
 ### material: [https://index.gd.workers.dev/](https://index.gd.workers.dev/)

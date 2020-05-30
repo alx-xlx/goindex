@@ -1,15 +1,17 @@
 self.props = {
 	title: 'goindex',
-	default_root_id: '0AK0dce9h38dOUk9PVA', // root OR 0AK0dce9h38dOUk9PVA
-  storage: 'drives', // drive OR drives
+	default_root_id: '0AK0dce9h38dOUk9PVA', // 'root' OR 0AK0dce9h38dOUk9PVA
+  storage: 'drives', // 'drive' OR 'drives'
+  // 'drive' will set 'default_root_id' as default
+  // 'drives' will list all drives (My Drive & Teamdrives)
   ui: 'dark', // light OR dark
 	client_id: '*******.apps.googleusercontent.com',
 	client_secret: '*****',
 	refresh_token: '******',
-	auth: false,
+	auth: false,       // Add Authentication
 	user: '',
 	pass: '',
-	upload: false,
+	upload: false,    // Ability to Upload Files (Local / Remote)
 	lite: false
 };
 (function () {
