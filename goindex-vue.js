@@ -1,15 +1,19 @@
 self.props = {
 	title: 'goindex',
-	default_root_id: '0AK0dce9h38dOUk9PVA', // root OR 0AK0dce9h38dOUk9PVA
-  storage: 'drives', // drive OR drives
-  ui: 'dark', // light OR dark
-	client_id: '*******.apps.googleusercontent.com',
-	client_secret: '*****',
-	refresh_token: '******',
-	auth: false,
-	user: '',
-	pass: '',
-	upload: false,
+	default_root_id: '0AK0dce9h38dOUk9PVA', // 'root' OR 0AK0dce9h38dOUk9PVA
+  // https://drive.google.com/drive/u/1/folders/0AK0dce9h38dOUk9PVA
+  storage: 'drives', // 'drive' OR 'drives'
+  // 'drive' will set 'default_root_id' as default
+  // 'drives' will list all drives (My Drive & Teamdrives)
+  ui: 'light', // light OR dark OR dark-orange
+  // https://github.com/alx-xlx/goindex/tree/production/themes
+	client_id: '**********.apps.googleusercontent.com',
+	client_secret: '********',
+	refresh_token: '*********',
+	auth: false,       // Add Authentication to your Indexed Drive
+	user: 'root',
+	pass: 'toor',
+	upload: true,    // Ability to Upload Files (Local / Remote)
 	lite: false
 };
 (function () {
@@ -454,7 +458,7 @@ self.props = {
 
     if (path.startsWith('/~_~_goindex/resources/')) {
       const remain = path.replace('/~_~_goindex/resources/', '');
-      const r = await fetch(`https://raw.githubusercontent.com/alx-xlx/goindex/master/themes/material-vue-${self.props.ui}/${remain}`);
+      const r = await fetch(`https://raw.githubusercontent.com/alx-xlx/goindex/production/themes/material-vue-${self.props.ui}/${remain}`);
       return new Response(r.body, {
         headers: {
           'Content-Type': mime.getType(remain) + '; charset=utf-8',
