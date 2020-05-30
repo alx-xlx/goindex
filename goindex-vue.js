@@ -1,6 +1,6 @@
 self.props = {
-	title: 'goindex',
-	default_root_id: '0AK0dce9h38dOUk9PVA', // 'root' OR 0AK0dce9h38dOUk9PVA
+	title: 'gdindex',
+	default_root_id: 'root', // 'root' OR 0AK0dce9h38dOUk9PVA
   // https://drive.google.com/drive/u/1/folders/0AK0dce9h38dOUk9PVA
   storage: 'drives', // 'drive' OR 'drives'
   // 'drive' will set 'default_root_id' as default
