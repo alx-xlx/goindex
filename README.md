@@ -16,6 +16,15 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 
 Dark Mode : [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-acrou/go2index/index.js)
 
+Copy the [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-acrou/go2index/index.js) script to [workers.dev](https://workers.dev) and edit `client_id`, `client_secret`, `refresh_token` with yours
+
+OR
+
+### GoIndex Auto Code Builder
+https://goindex.glitch.me/
+
+Simply visit [this](https://goindex.glitch.me/) Modified (only for Dark Mode) version to automatically generate your `index.js` without having to manually edit anything.
+
 ### List View - Dark Mode
 ![](https://i.imgur.com/Y9pJo1V.png)
 
