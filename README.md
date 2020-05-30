@@ -47,13 +47,15 @@ Demo - [gdindex-dark.teamsdrives.workers.dev](https://gdindex-dark.teamsdrives.w
 Workers Script - [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex.js)
 
 ## Themes
-### material: [https://index.gd.workers.dev/](https://index.gd.workers.dev/)
+
+### Demo Classic : [goindex-classic.teamsdrives.workers.dev](https://goindex-classic.teamsdrives.workers.dev)
+
+![](https://i.imgur.com/lNeh3S3.png)
+
+### Demo Material: [goindex-material.teamsdrives.workers.dev](https://goindex-material.teamsdrives.workers.dev)
 
 ![](https://i.imgur.com/jAq7Lsm.png)
 
-### classic: [https://indexc.gd.workers.dev/](https://indexc.gd.workers.dev/)
-
-![](https://i.imgur.com/lNeh3S3.png)
 
 ## Deployment  
 1.Install `rclone` software locally  
