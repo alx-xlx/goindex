@@ -1,7 +1,7 @@
 // =======Options START=======
 var authConfig = {
   siteName: "GoIndex", // 网站名称
-  version: "production", // 程序版本
+  version: "production", // 程序版本 master or production or dev
   theme: "acrou",
   // Highly recommend using your own client_id and client_secret
   client_id: "202264815644.apps.googleusercontent.com",
