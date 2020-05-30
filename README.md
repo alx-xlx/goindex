@@ -38,7 +38,7 @@ Simply visit [this](https://goindex.glitch.me/) Modified (only for Dark Mode) ve
 ---
 ## 2. [maple3142/GDIndex](https://github.com/maple3142/GDIndex)
 ---
-
+[index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-vue.js)
 ## 3. donwa/goindex
 
 [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex.js)
@@ -69,7 +69,7 @@ Simply visit [this](https://goindex.glitch.me/) Modified (only for Dark Mode) ve
 Use this when you want to host everything
 
 ## Get Google ClientID and SecretID
-Log into the Google API Console [https://console.developers.google.com/] with your Google account. It doesn’t matter what Google account you use. (It need not be the same account as the Google Drive you want to access)
+Log into the Google API Console [https://console.developers.google.com/] with your Google account. It doesn’t matter which Google account you use. (It need not be the same account as the Google Drive you want to access)
 
 Select a project or create a new project.
 
