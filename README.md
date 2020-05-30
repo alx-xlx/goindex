@@ -44,7 +44,7 @@ Demo - [gdindex-dark.teamsdrives.workers.dev](https://gdindex-dark.teamsdrives.w
 
 ## 3. donwa/goindex
 
-[index.js](https://github.com/alx-xlx/goindex/blob/production/goindex.js)
+Workers Script - [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex.js)
 
 ## Themes
 ### material: [https://index.gd.workers.dev/](https://index.gd.workers.dev/)
