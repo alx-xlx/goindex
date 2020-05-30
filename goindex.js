@@ -7,7 +7,7 @@ var authConfig = {
   "client_id": "******.apps.googleusercontent.com", // client_id from rclone config
   "client_secret": "*******", // client_secret from rclone config
   "refresh_token": "*********", // authorized refresh token from rclone config
-  "root": "0AL74eWbneC4hUk9PVA" // "root" OR ROOT_FOLDER
+  "root": "0AL74eWbneC4hUk9PVA" // "root" or ROOT_FOLDER of TeamDrives e.g "0AL74eWbneC4hUk9PVA"
 };
 
 var gd;
