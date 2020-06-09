@@ -1,16 +1,24 @@
 ### Top Bar
+.navbar.is-dark{background-color:#363636;color:#fff}
+
 .navbar.is-dark{background-color:#3a3c40;color:#fff}
 
 ### Hover Selection Table Span
+tr:not(.is-selected):hover{background-color:#fafafa}
+
 tr:not(.is-selected):hover{background-color:#585b62;color: #ffffff}
 
 ### Hover Table Individual Selection
+.table td .icon,.table td:hover{cursor:pointer}
+
 .table td .icon,.table td:hover{cursor:pointer;background-color:#3D4149;color: #ffffff}
 
 ### TAble Body
+.table{background-color:#fff;color:#363636}
+
 .table{background-color:#3d4149;color:#ffffff}
 
-### Drive Dropdown
+### Drive Dropdown *
 .navbar-dropdown{border-radius:6px;border-top:none;box-shadow:0 8px 8px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);display:block;opacity:0;pointer-events:none;top:calc(100% + -4px);transform:translateY(-5px);transition-duration:86ms;transition-property:opacity,transform}
 
 ### Lnguage Already Selected
