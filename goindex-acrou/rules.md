@@ -44,6 +44,11 @@ html{background-color:#3d4149;font-size:16px;-moz-osx-font-smoothing:grayscale;-
 
 .card{background-color:#585b62;box-shadow:0 .5em 1em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);color:#ffffff;max-width:100%;position:relative}
 
+### Thumbnail and list toggle
+body{color:#4a4a4a;font-size:1em;font-weight:400;line-height:1.5}
+
+body{color:#ede6e6;font-size:1em;font-weight:400;line-height:1.5}
+
 ### Drive Dropdown *
 .navbar-dropdown{border-radius:6px;border-top:none;box-shadow:0 8px 8px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);display:block;opacity:0;pointer-events:none;top:calc(100% + -4px);transform:translateY(-5px);transition-duration:86ms;transition-property:opacity,transform}
 
@@ -110,7 +115,7 @@ a.navbar-item:hover{background-color:#ff3434;color:#fff}
 .g2-grid-view-card[data-v-1871190e]:hover{box-shadow:0 4px 10px #f4f2f1, 0 0 1px rgba(0,0,0,.05)}
 
 -------------------------
-
+## Do this everytime a new Update is done in the code with your branch name
 ### app.js
 
 hackgence-com/goindexXX@master
