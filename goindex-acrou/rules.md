@@ -38,6 +38,12 @@ html{background-color:#3d4149;font-size:16px;-moz-osx-font-smoothing:grayscale;-
 .viewer-button:hover{background-color:rgba(0,0,0,.8)}
 
 .viewer-button:hover{background-color:#e96060f2}
+
+### Thumbnail Card
+.card{background-color:#fff;box-shadow:0 .5em 1em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);color:#4a4a4a;max-width:100%;position:relative}
+
+.card{background-color:#585b62;box-shadow:0 .5em 1em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);color:#ffffff;max-width:100%;position:relative}
+
 ### Drive Dropdown *
 .navbar-dropdown{border-radius:6px;border-top:none;box-shadow:0 8px 8px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);display:block;opacity:0;pointer-events:none;top:calc(100% + -4px);transform:translateY(-5px);transition-duration:86ms;transition-property:opacity,transform}
 
@@ -96,7 +102,12 @@ a.navbar-item:hover{background-color:#ff3434;color:#fff}
 
 
 
+## chunk-50779d2e.ce88a193.css
 
+### Thumbnail Hover Shadow
+.g2-grid-view-card[data-v-1871190e]:hover{box-shadow:0 4px 10px rgba(0,0,0,.4),0 0 1px rgba(0,0,0,.05)}
+
+.g2-grid-view-card[data-v-1871190e]:hover{box-shadow:0 4px 10px #f4f2f1, 0 0 1px rgba(0,0,0,.05)}
 
 -------------------------
 
