@@ -4,15 +4,20 @@
 
 .navbar.is-dark{background-color:#3a3c40;color:#fff}
 
+### File Size Bar Color
+.table thead td,.table thead th{border-width:0 0 2px;color:#363636}
+
+.table thead td,.table thead th{border-width:0 0 2px;color:#fcb49a}
+
 ### Hover Selection Table Span
 tr:not(.is-selected):hover{background-color:#fafafa}
 
-tr:not(.is-selected):hover{background-color:#585b62;color: #dbdbdb}
+tr:not(.is-selected):hover{background-color:#fcb49a;color:#dbdbdb}
 
 ### Hover Table Individual Selection
 .table td .icon,.table td:hover{cursor:pointer}
 
-.table td .icon,.table td:hover{cursor:pointer;background-color:#3D4149;color: #ffffff}
+.table td .icon,.table td:hover{cursor:pointer;background-color:#fcb49a;color:#ffffff}
 
 ### Table Body
 .table{background-color:#fff;color:#363636}
@@ -22,8 +27,17 @@ tr:not(.is-selected):hover{background-color:#585b62;color: #dbdbdb}
 ### HTML Body
 html{background-color:#fff;font-size:16px;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;min-width:300px;overflow-x:hidden;overflow-y:scroll;text-rendering:optimizeLegibility;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}
 
-html{background-color:#fff;font-size:16px;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;min-width:300px;overflow-x:hidden;overflow-y:scroll;text-rendering:optimizeLegibility;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}
+html{background-color:#3d4149;font-size:16px;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;min-width:300px;overflow-x:hidden;overflow-y:scroll;text-rendering:optimizeLegibility;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}
 
+### Image Close Without hover
+.viewer-button{background-color:rgba(0,0,0,.5);border-radius:50%;cursor:pointer;height:80px;overflow:hidden;position:absolute;right:-40px;top:-40px;-webkit-transition:background-color .15s;transition:background-color .15s;width:80px}
+
+.viewer-button{background-color:#95f260d9;border-radius:50%;cursor:pointer;height:80px;overflow:hidden;position:absolute;right:-40px;top:-40px;-webkit-transition:background-color .15s;transition:background-color .15s;width:80px}
+
+### Image Close With Hover
+.viewer-button:hover{background-color:rgba(0,0,0,.8)}
+
+.viewer-button:hover{background-color:#e96060f2}
 ### Drive Dropdown *
 .navbar-dropdown{border-radius:6px;border-top:none;box-shadow:0 8px 8px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);display:block;opacity:0;pointer-events:none;top:calc(100% + -4px);transform:translateY(-5px);transition-duration:86ms;transition-property:opacity,transform}
 
