@@ -55,18 +55,24 @@ a.navbar-item:hover{background-color:#ff3434;color:#fff}
 .el-notification{display:flex;width:330px;padding:14px 26px 14px 13px;border-radius:8px;box-sizing:border-box;border:1px solid #3D4149;position:fixed;background-color:#3D4149;box-shadow:0 2px 12px 0 rgba(0,0,0,.1);transition:opacity .3s,transform .3s,left .3s,right .3s,top .4s,bottom .3s;overflow:hidden}
 
 ### Title
+.el-notification__title{font-weight:700;font-size:16px;color:#303133;margin:0}
+
 .el-notification__title{font-weight:700;font-size:16px;color:#ffffff;margin:0}
 
 ### Content
+.el-notification__content{font-size:14px;line-height:21px;margin:6px 0 0;color:#606266;text-align:justify}
+
 .el-notification__content{font-size:14px;line-height:21px;margin:6px 0 0;color:#dddddd;text-align:justify}
 
 ### Success Icon
 .el-icon-success{color:#67c23a}
 
-
+.el-icon-success{color:#67c23a}
 
 
 ### Loading Mask
+.el-loading-mask{position:absolute;z-index:2000;background-color:hsla(0,0%,100%,.9);margin:0;top:0;right:0;bottom:0;left:0;transition:opacity .3s}
+
 .el-loading-mask{position:absolute;z-index:2000;background-color:#f3f4f76e;margin:0;top:0;right:0;bottom:0;left:0;transition:opacity .3s}
 
 
@@ -75,6 +81,19 @@ a.navbar-item:hover{background-color:#ff3434;color:#fff}
 
 -------------------------
 
-index.js
-app.js
-goindex.glitch.me
+### app.js
+
+hackgence-com/goindexXX@master
+
+hackgence-com/goindexXX@pro-0.2
+
+### app.e49c59b7.js
+
+hackgence-com/goindexXX@master
+
+hackgence-com/goindexXX@pro-0.2
+--------------------
+hackgence-com/goindexXX
+
+hackgence-com/goindexXX
+
