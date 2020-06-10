@@ -14,9 +14,9 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 
 ## [Aicirou/goindex-theme](https://github.com/Aicirou/goindex-theme-acrou)
 
-Dark Mode : [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-acrou/go2index/index.js)
+Dark Mode : [index.js](https://github.com/alx-xlx/goindex/blob/2.0.5-darkmode-0.1/goindex-acrou/go2index/index.js)
 
-Copy the [index.js](https://github.com/alx-xlx/goindex/blob/production/goindex-acrou/go2index/index.js) script to [workers.dev](https://workers.dev) and edit `client_id`, `client_secret`, `refresh_token` with yours
+Copy the [index.js](https://github.com/alx-xlx/goindex/blob/2.0.5-darkmode-0.1/goindex-acrou/go2index/index.js) script to [workers.dev](https://workers.dev) and edit `client_id`, `client_secret`, `refresh_token` with yours
 
 OR
 

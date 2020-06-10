@@ -67,7 +67,7 @@ var authConfig = {
 var themeOptions = {
   cdn: "https://cdn.jsdelivr.net/gh/alx-xlx/goindex",
 // Theme version number 
-  version: "v2.0.5-darkmode", //v2.0.5-darkmode/goindex-acrou
+  version: "2.0.5-darkmode-0.1", //2.0.5-darkmode-0.1/goindex-acrou
   //Optional default system language:en/zh-chs/zh-cht
   languages: "en",
   render: {
