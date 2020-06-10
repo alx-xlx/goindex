@@ -1,24 +1,24 @@
 // =======Options START=======
 var authConfig = {
-  siteName: "goindex", // Website name
-  version: "1.1.1", //Program Version
+  siteName: "goindex", // 网站名称
+  version: "1.1.1", // 程序版本
   theme: "acrou",
-  // Highly recommend using your own client_id and client_secret
+  // 强烈推荐使用自己的 client_id 和 client_secret
   client_id: "202264815644.apps.googleusercontent.com",
   client_secret: "X4Z3ca8xfWDb1Voo-F9a7ZxJ",
-  refresh_token: "", // Authorize token
+  refresh_token: "", // 授权 token
   /**
-   1. Set up multiple Drives to be displayed; add multiples by format
-   * [id]: It can be the team disk id, subfolder id, or "root" (representing the root directory of personal disk);
-   * [name]: the displayed name
-   * [user]: Basic Auth username
-   * [pass]: Basic Auth password
-   * [protect_file_link]: Whether Basic Auth is used to protect the file link, the default value (when not set) is false, that is, the file link is not protected (convenient for straight chain download/external playback, etc.)
-   * Basic Auth of each disk can be set separately. Basic Auth protects all folders/subfolders in the disk by default
-   * [Note] By default, the file link is not protected, which can facilitate straight-chain download/external playback;
-   * If you want to protect the file link, you need to set protect_file_link to true. At this time, if you want to perform external playback and other operations, you need to replace host with user:pass@ host
-   * No need for Basic Auth disk, just keep user and pass empty at the same time. (No need to set it directly)
-   * [Note] For the disk whose id is set to the subfolder id, the search function will not be supported (it does not affect other disks)
+   * 设置要显示的多个云端硬盘；按格式添加多个
+   * [id]: 可以是 团队盘id、子文件夹id、或者"root"（代表个人盘根目录）；
+   * [name]: 显示的名称
+   * [user]: Basic Auth 的用户名
+   * [pass]: Basic Auth 的密码
+   * [protect_file_link]: Basic Auth 是否用于保护文件链接，默认值（不设置时）为 false，即不保护文件链接（方便 直链下载/外部播放 等）
+   * 每个盘的 Basic Auth 都可以单独设置。Basic Auth 默认保护该盘下所有文件夹/子文件夹路径
+   * 【注意】默认不保护文件链接，这样可以方便 直链下载/外部播放;
+   *       如果要保护文件链接，需要将 protect_file_link 设置为 true，此时如果要进行外部播放等操作，需要将 host 替换为 user:pass@host 的 形式
+   * 不需要 Basic Auth 的盘，保持 user 和 pass 同时为空即可。（直接不设置也可以）
+   * 【注意】对于id设置为为子文件夹id的盘将不支持搜索功能（不影响其他盘）。
    */
   roots: [
     {
@@ -41,56 +41,56 @@ var authConfig = {
   ],
   default_gd: 0,
   /**
-  * The number displayed on each page of the file list page. [Recommended setting value is between 100 and 1000];
-  * If the setting is greater than 1000, it will cause an error when requesting drive api;
-  * If the set value is too small, it will cause the incremental loading (page loading) of the scroll bar of the file list page to fail;
-  * Another effect of this value is that if the number of files in the directory is greater than this setting value (that is, multiple pages need to be displayed), the results of the first listing directory will be cached.
-  */
+   * 文件列表页面每页显示的数量。【推荐设置值为 100 到 1000 之间】；
+   * 如果设置大于1000，会导致请求 drive api 时出错；
+   * 如果设置的值过小，会导致文件列表页面滚动条增量加载（分页加载）失效；
+   * 此值的另一个作用是，如果目录内文件数大于此设置值（即需要多页展示的），将会对首次列目录结果进行缓存。
+   */
   files_list_page_size: 50,
   /**
-  * The number displayed on each page of the search results page. [Recommended setting value is between 50 and 1000];
-  * If the setting is greater than 1000, it will cause an error when requesting drive api;
-  * If the set value is too small, it will cause the incremental loading (page loading) of the scroll bar of the search results page to fail;
-  * The size of this value affects the response speed of the search operation.
-  */
+   * 搜索结果页面每页显示的数量。【推荐设置值为 50 到 1000 之间】；
+   * 如果设置大于1000，会导致请求 drive api 时出错；
+   * 如果设置的值过小，会导致搜索结果页面滚动条增量加载（分页加载）失效；
+   * 此值的大小影响搜索操作的响应速度。
+   */
   search_result_list_page_size: 50,
-  /** Confirm that cors can be opened */
+  // 确认有 cors 用途的可以开启
   enable_cors_file_down: false,
   /**
-  * The above basic auth already includes the function of global protection in the disk. So by default, the password in the .password file is no longer authenticated;
-  * If you still need to verify the password in the .password file for certain directories based on global authentication, set this option to true;
-  * [Note] If the password verification of the .password file is turned on, each time the directory is listed, it will additionally increase the overhead of querying whether the .password file in the directory exists.
-  */
+   * 上面的 basic auth 已经包含了盘内全局保护的功能。所以默认不再去认证 .password 文件内的密码;
+   * 如果在全局认证的基础上，仍需要给某些目录单独进行 .password 文件内的密码验证的话，将此选项设置为 true;
+   * 【注意】如果开启了 .password 文件密码验证，每次列目录都会额外增加查询目录内 .password 文件是否存在的开销。
+   */
   enable_password_file_verify: false,
 };
 
 var themeOptions = {
   cdn: "https://cdn.jsdelivr.net/gh/alx-xlx/goindex",
-// Theme version number 
-  version: "2.0.5-darkmode-0.1", //2.0.5-darkmode-0.1/goindex-acrou
-  //Optional default system language:en/zh-chs/zh-cht
+  // 主题版本号
+  version: "2.0.5-darkmode-0.1",
+  //可选默认系统语言:en/zh-chs/zh-cht
   languages: "en",
   render: {
-/**
-      * Whether to render HEAD.md file
-      * Render HEAD.md file
-      */
+    /**
+     * 是否渲染HEAD.md文件
+     * Render HEAD.md file
+     */
     head_md: false,
-/**
-      * Whether to render README.md file
-      * Render README.md file
-      */
+    /**
+     * 是否渲染README.md文件
+     * Render README.md file
+     */
     readme_md: false,
-/**
-      * Whether to render file/folder description
-      * Render file/folder description or not
-      */
+    /**
+     * 是否渲染文件/文件夹描述
+     * Render file/folder description or not
+     */
     desc: false,
   },
-/**
-    * Player options
-    * Player options
-    */
+  /**
+   * 播放器选项
+   * Player options
+   */
   player: {
     /**
      * 播放器api（不指定则使用浏览器默认播放器）
