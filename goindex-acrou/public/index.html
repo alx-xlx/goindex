@@ -14,7 +14,7 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
   <script>
     var authConfig = {
-      version: '1.1.0',
+      version: '1.1.1',
       roots: [
         {
           id: "",
@@ -42,6 +42,9 @@
         // 是否显示文件/文件夹描述（默认不显示）
         // Show file/folder description or not (not shown by default)
         desc: true,
+      },
+      player: {
+          api: "https://api.jsonpop.cn/demo/blplyaer/?url="
       }
     }
     window.gdconfig = JSON.parse(JSON.stringify({ version: authConfig.version, themeOptions: themeOptions }));

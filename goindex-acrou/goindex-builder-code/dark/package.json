@@ -1,0 +1,32 @@
+{
+    "//1": "describes your app and its dependencies",
+    "//2": "https://docs.npmjs.com/files/package.json",
+    "//3": "updating this file will download and update your packages",
+    "name": "hello-express",
+    "version": "0.0.1",
+    "description": "A simple Node app built on Express, instantly up and running.",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "@cloudflare/wrangler": "^1.8.4",
+      "body-parser": "^1.19.0",
+      "cloudflare": "^2.7.0",
+      "express": "^4.16.4",
+      "xfetch-js": "^0.3.4"
+    },
+    "engines": {
+      "node": "8.x"
+    },
+    "repository": {
+      "url": "https://glitch.com/edit/#!/hello-express"
+    },
+    "license": "MIT",
+    "keywords": [
+      "node",
+      "glitch",
+      "express"
+    ]
+  }
+  
