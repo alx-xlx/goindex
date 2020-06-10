@@ -22,12 +22,12 @@ var authConfig = {
    */
   roots: [
     {
-      id: "root",
-      name: "My Drive",
+      id: "",
+      name: "TeamDrive",
       pass: "",
     },
     {
-      id: "",
+      id: "root",
       name: "PrivateDrive",
       user: "",
       pass: "",
