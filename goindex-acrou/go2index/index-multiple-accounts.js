@@ -48,16 +48,6 @@ var authConfig = {
       {
         id: "root",
         name: "Drive 1",
-        user: "admin",
-        pass: "1234",
-        protect_file_link: true,
-        client_id: "",
-        client_secret: "",
-        refresh_token: ""
-      },
-      {
-        id: "root",
-        name: "Drive 2",
         user: "",
         pass: "",
         protect_file_link: false,
@@ -66,16 +56,26 @@ var authConfig = {
         refresh_token: ""
       },
       {
+        id: "root",
+        name: "Drive 2",
+        user: "1234",
+        pass: "1234",
+        protect_file_link: true,
+        client_id: "",
+        client_secret: "",
+        refresh_token: ""
+      },
+      {
         id: "",
-        name: "folder1",
+        name: "Drive 3",
         pass: "",
       },
     ]
   
   var themeOptions = {
-    cdn: "https://cdn.jsdelivr.net/gh/Aicirou/goindex-theme-acrou",
-    // 主题版本号
-    version: "2.0.5",
+  cdn: "https://cdn.jsdelivr.net/gh/alx-xlx/goindex",
+  // 主题版本号
+  version: "2.0.5-darkmode-0.1",
     //可选默认系统语言:en/zh-chs/zh-cht
     languages: "en",
     render: {
@@ -154,7 +154,7 @@ var authConfig = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
     <title>${authConfig.siteName}</title>
     <style>
-      @import url(${themeOptions.cdn}@${themeOptions.version}/dist/style.min.css);
+      @import url(${themeOptions.cdn}@${themeOptions.version}/goindex-acrou/dist/style.min.css);
     </style>
     <script>
       window.gdconfig = JSON.parse('${JSON.stringify({
@@ -173,7 +173,7 @@ var authConfig = {
       <div id="app"></div>
       <script src="${themeOptions.cdn}@${
       themeOptions.version
-    }/dist/app.min.js"></script>
+    }/goindex-acrou/dist/app.min.js"></script>
   </body>
   </html>
   `;
@@ -404,9 +404,8 @@ var authConfig = {
       // 每个盘对应一个order，对应一个gd实例
       this.order = order;
       this.accounts = accounts[order];
-      console.log(this.accounts);
       this.protect_file_link = this.protect_file_link || false;
-      this.url_path_prefix = `/${order}:/`;
+      this.url_path_prefix = `/${order}:`;
       this.authConfig = authConfig;
       // TODO: 这些缓存的失效刷新策略，后期可以制定一下
       // path id

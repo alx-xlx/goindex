@@ -11,10 +11,12 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 # Versions
 
 
+## 1. [Aicirou/goindex-theme-acrou](https://github.com/Aicirou/goindex-theme-acrou)
 
-## 1. [Aicirou/goindex-theme](https://github.com/Aicirou/goindex-theme-acrou)
 
 Worker Script (Dark Mode) : [index.js](https://github.com/alx-xlx/goindex/blob/2.0.5-darkmode-0.1/goindex-acrou/go2index/index.js)
+
+Worker Script (Multiple Google Accounts) : [index-multiple-accounts.js](https://github.com/alx-xlx/goindex/blob/master/goindex-acrou/go2index/index-multiple-accounts.js)
 
 Demo - [goindex.teamsdrives.workers.dev](https://goindex.teamsdrives.workers.dev)
 
@@ -178,3 +180,11 @@ https://www.base64-image.de/
 
 ## About  
 Cloudflare Workers allow you to write JavaScript which runs on all of Cloudflare's 150+ global data centers.  
+
+## Credits - Original Authors
+
+goindex-theme-acrou - [Aicirou](https://github.com/Aicirou/goindex-theme-acrou)
+
+GDIndex - [maple3142](https://github.com/maple3142/GDIndex)
+
+goindex - [donwa](https://github.com/donwa/goindex)
