@@ -1,5 +1,5 @@
 {
-  "_name": "🇬🇧English",
+  "_name": "English",
   "languages": "Languages",
   "index": "Home",
   "folder": "Folder",
@@ -7,6 +7,7 @@
     "title": "Notify"
   },
   "copy": {
+    "text": "Copy",
     "success": "Copy successful",
     "error": "Copy failed"
   },
@@ -36,9 +37,9 @@
   },
   "page": {
     "video": {
-        "play": "Play",
-        "download": "Download",
-        "link": "Download link"
+      "play": "Play",
+      "download": "Download",
+      "link": "Download link"
     },
     "text": {
       "loading": "Loading..."
@@ -52,5 +53,9 @@
   },
   "checkVersion": {
     "tips": "New version detected, <a href='${url}'>Go to GitHub</a>"
+  },
+  "error": {
+    "shortcut_not_down": "Shortcut can't open/download",
+    "401": "Unauthorized, please login"
   }
 }

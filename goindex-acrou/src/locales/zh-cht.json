@@ -1,5 +1,5 @@
 {
-  "_name": "🇨🇳繁体中文",
+  "_name": "繁体中文",
   "languages": "選擇語言",
   "index": "首頁",
   "folder": "文件夾",
@@ -7,6 +7,7 @@
     "title": "提示"
   },
   "copy": {
+    "text": "復制",
     "success": "復制成功",
     "error": "復制失敗"
   },
@@ -52,5 +53,9 @@
   },
   "checkVersion": {
     "tips": "檢測到有新版本，<a href='${url}'>前往GitHub</a>"
+  },
+  "error": {
+    "shortcut_not_down": "快捷方式無法打開/下載",
+    "401": "未授權，請登錄"
   }
 }

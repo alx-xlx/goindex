@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google-site-verification" content="NeG-I2RECmGVyv_o9sISirpGd8t6Oi0Xwz7h_Cfq9Ao" />
+    <meta name="description" content="A cool thing made with Glitch" />
+
+    <title>GoIndex code builder</title>
+
+    <!--     <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/alx-xlx/goindex@2.0.5-darkmode-0.1/goindex-acrou/goindex-builder-code/dark/src/bulma.min.css"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"
+      as="script"
+    />
+    <style>
+      [v-cloak] {
+        display: none !important;
+      }
+      a:hover {
+        color: #3273dc;
+        text-decoration: underline;
+      }
+      table.table tr th {
+        border: 0;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    <script src="/script.js" defer></script>
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?9c5614ee0ea7b04c0f3d142b02f283fc";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="level">
+        <div class="level-item"></div>
+        <div class="level-item">
+          <div class="content">
+            <div class="card has-background-dark has-text-white">
+              <div class="card-content">
+                <h1 class="title is-1 has-text-white">
+                  GoIndex Auto Code Builder<a
+                    style="font-size:12px;color:white;"
+                    href="/zh"
+                    >中文</a
+                  >
+                </h1>
+                This is a Modified (Dark Mode) version of website to help you get started with
+                <a
+                  href="https://github.com/alx-xlx/goindex"
+                  target="_blank"
+                  >GoIndex</a
+                > ( Dark Mode ). <br />
+                <span>
+                  The Modified (Dark Mode) source code of this website can be found
+                  <a
+                    href="https://glitch.com/edit/#!/goindex"
+                    target="_blank"
+                    >here</a
+                  >, so no need to worry about whether it is trustworthy.</span
+                > <br />
+                <span>
+                  The original work for this website can be found 
+                  <a
+                    href="https://glitch.com/edit/#!/goindex-quick-install"
+                    target="_blank"
+                    >here</a
+                  >, and the original Github Repo can be found 
+                  <a
+                    href="https://github.com/Aicirou/goindex-theme-acrou"
+                    target="_blank"
+                    >here</a
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="field">
+                  <h5 class="title is-5">1. Get Authorization Code</h5>
+                </div>
+                <p>
+                  Click the following link and authorize, then copy the code you
+                  get.
+                </p>
+                <a
+                  class="button is-dark"
+                  target="_blank"
+                  href="https://accounts.google.com/o/oauth2/auth?client_id=202264815644.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&approval_prompt=auto"
+                  >Click me</a
+                >
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="field">
+                  <h5 class="title is-5">2. Fill the form</h5>
+                </div>
+                <div class="field">
+                  <label class="label">Authorization Code</label>
+                  <div class="control">
+                    <input
+                      v-model="options.authCode"
+                      class="input"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Site name</label>
+                  <div class="control">
+                    <input
+                      v-model="options.siteName"
+                      class="input"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="field">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Drive ID</th>
+                        <th>Title</th>
+                        <th>User name</th>
+                        <th>Password</th>
+                        <th>
+                          <button
+                            class="button is-small is-white"
+                            @click="addRoot"
+                          >
+                            + Add
+                          </button>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr v-for="(root,index) in options.roots" :key="index">
+                        <td>
+                          <input
+                            class="input is-small"
+                            type="text"
+                            v-model="root.id"
+                          />
+                        </td>
+                        <td>
+                          <input
+                            class="input is-small"
+                            type="text"
+                            v-model="root.name"
+                          />
+                        </td>
+                        <td>
+                          <input
+                            class="input is-small"
+                            type="text"
+                            v-model="root.user"
+                          />
+                        </td>
+                        <td>
+                          <input
+                            class="input is-small"
+                            type="text"
+                            v-model="root.pass"
+                          />
+                        </td>
+                        <td>
+                          <button
+                            class="button is-small is-white"
+                            @click="delRoot(index)"
+                            v-show="index!==0"
+                          >
+                            -
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="columns">
+                  <div class="column">
+                    <div class="field">
+                      <label class="label">Render options</label>
+                      <div class="control">
+                        <label class="checkbox">
+                          <input type="checkbox" v-model="options.head_md" />
+                          HEAD.md
+                        </label>
+                        <label class="checkbox">
+                          <input type="checkbox" v-model="options.readme_md" />
+                          README.md
+                        </label>
+                        <label class="checkbox">
+                          <input type="checkbox" v-model="options.desc" />
+                          File/Folder description
+                        </label>
+                        <p class="help has-text-grey">
+                          Uncheck do not render by default
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column is-one-quarter">
+                    <div class="field">
+                      <label class="label">Languages</label>
+                      <div class="control">
+                        <div class="select">
+                          <select v-model="options.languages">
+                            <option value="en">English</option>
+                            <option value="zh-chs">简体中文</option>
+                            <option value="zh-cht">繁体中文</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Enable options</label>
+                  <div class="control">
+                    <label class="checkbox">
+                      <input
+                        type="checkbox"
+                        v-model="options.enable_password_file_verify"
+                      />
+                      Password file verify
+                    </label>
+                    <label class="checkbox">
+                      <input
+                        type="checkbox"
+                        v-model="options.enable_cors_file_down"
+                      />
+                      Cors file down
+                    </label>
+                    <p class="help has-text-grey">
+                      If you don't know what is this, just leave it alone.
+                    </p>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <label class="checkbox">
+                      <input type="checkbox" v-model="options.remember" />
+                      Keep these options in mind and auto fill next time
+                    </label>
+                  </div>
+                </div>
+                <button
+                  class="button is-dark"
+                  :disabled="loading"
+                  @click="getCode"
+                >
+                  <div>
+                    Get Code
+                  </div>
+                  <span
+                    class="tag icon"
+                    style="margin-left:10px;"
+                    v-cloak
+                    v-show="loading"
+                  >
+                    <i class="button is-dark is-loading"></i>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="card" v-cloak v-show="result.status==='success'">
+              <div class="card-content">
+                <div class="field">
+                  <h5 class="title is-5">3. Finished</h5>
+                </div>
+                <p>
+                  Copy the following code and go to
+                  <a href="https://workers.cloudflare.com/" target="_blank"
+                    >CloudFlare Workers</a
+                  >
+                  to paste the code.
+                </p>
+                <a
+                  class="button is-text has-text-right"
+                  id="copy"
+                  data-clipboard-target="#code"
+                >
+                  Copy the code to clipboard
+                </a>
+                <div class="control">
+                  <textarea
+                    id="code"
+                    class="textarea"
+                    v-model="result.content"
+                    rows="100"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="card" v-cloak v-show="result.status==='fail'">
+              <div class="card-content">
+                <div class="field">
+                  <h5 class="title is-5">3. Failed</h5>
+                </div>
+                {{ result.message }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="level-item"></div>
+      </div>
+    </div>
+  </body>
+</html>
