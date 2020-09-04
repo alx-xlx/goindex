@@ -1,41 +1,40 @@
 <template>
   <div>
-    <headmd :option="headmd" v-if="renderHeadMD && headmd.display"></headmd>
-    <div
-      class="golist"
-      v-loading="loading"
-      v-infinite-scroll="pageLoad"
-      infinite-scroll-disabled="busy"
-      infinite-scroll-distance="10"
-    >
+    <headmd
+      :option="headmd"
+      v-if="renderHeadMD && headmd.display"
+      style="margin:1rem 0;"
+    ></headmd>
+    <bread-crumb ref="breadcrumb"></bread-crumb>
+    <div class="golist" v-loading="loading">
       <list-view
-        :data="buildFiles"
+        :data="files"
         v-if="mode === 'list'"
         :icons="getIcon"
-        :go="go"
+        :action="action"
         :copy="copy"
       />
       <grid-view
         class="g2-content"
-        :data="buildFiles"
+        :data="files"
         v-if="mode !== 'list'"
         :getIcon="getIcon"
-        :go="go"
+        :action="action"
         :thum="thum"
       />
+      <infinite-loading
+        v-show="!loading"
+        ref="infinite"
+        spinner="bubbles"
+        @infinite="infiniteHandler"
+      >
+        <div slot="no-more"></div>
+        <div slot="no-results"></div>
+      </infinite-loading>
       <div
         v-show="files.length === 0"
         class="has-text-centered no-content"
       ></div>
-      <center>
-        <div :class="!busy ? 'is-hidden' : ''">
-          <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
-          <span class="sr-only">Loading...</span>
-        </div>
-        <!-- <span v-if="page.page_token === null && files.length !== 0" class="tag">
-          {{ $t("list.total") }} {{ files.length }} {{ $t("list.item") }}
-        </span>-->
-      </center>
     </div>
     <div
       class="is-divider"
@@ -43,7 +42,10 @@
         $t('list.total') + ' ' + files.length + ' ' + $t('list.item')
       "
     ></div>
-    <readmemd :option="readmemd" v-if="renderReadMeMD && readmemd.display"></readmemd>
+    <readmemd
+      :option="readmemd"
+      v-if="renderReadMeMD && readmemd.display"
+    ></readmemd>
 
     <viewer
       v-if="viewer && images && images.length > 0"
@@ -73,53 +75,70 @@ import {
   checkView,
   checkExtends,
 } from "@utils/AcrouUtil";
-import axios from "@/utils/axios";
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
+import BreadCrumb from "../common/BreadCrumb";
 import ListView from "./components/list";
 import GridView from "./components/grid";
 import Markdown from "../common/Markdown";
+import InfiniteLoading from "vue-infinite-loading";
 export default {
   name: "GoList",
   components: {
+    BreadCrumb,
     ListView,
     GridView,
     Headmd: Markdown,
     Readmemd: Markdown,
+    InfiniteLoading,
   },
   data: function() {
     return {
-      busy: false,
+      infiniteId: +new Date(),
+      loading: true,
       page: {
         page_token: null,
         page_index: 0,
       },
       files: [],
-      loading: true,
       viewer: false,
       icon: {
-        "application/vnd.google-apps.folder": "icon-morenwenjianjia",
-        "video/mp4": "icon-mp",
+        "application/vnd.google-apps.folder": "icon-folder",
+        "video/mp4": "icon-mp4",
         "video/x-matroska": "icon-mkv",
         "video/x-msvideo": "icon-avi",
         "video/webm": "icon-webm",
+        "video/x-flv": "icon-video",
+        "application/x-mpegURL": "icon-video",
+        "audio/mpegurl": "icon-video",
+        "audio/mp3": "icon-audio",
+        "audio/flac": "icon-audio",
+        "audio/x-m4a": "icon-audio",
+        "audio/wav": "icon-audio",
+        "audio/ogg": "icon-audio",
         "text/plain": "icon-txt",
         "text/markdown": "icon-markdown",
-        "text/x-ssa": "icon-ASS",
+        "text/x-ssa": "icon-ass",
         "text/html": "icon-html",
         "text/x-python-script": "icon-python",
-        "text/x-java": "icon-java1",
-        "text/x-sh": "icon-SH",
+        "text/x-java": "icon-java",
+        "text/x-sh": "icon-sh",
         "application/x-subrip": "icon-srt",
         "application/zip": "icon-zip",
+        "application/x-zip-compressed": "icon-zip",
         "application/rar": "icon-rar",
         "application/pdf": "icon-pdf",
-        "application/json": "icon-JSON1",
-        "application/x-yaml": "icon-YML",
+        "application/json": "icon-json",
+        "application/x-yaml": "icon-yml",
         "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
           "icon-word",
+        "application/vnd.android.package-archive": "icon-app",
+        "application/x-msdownload": "icon-exe",
+        "application/x-apple-diskimage": "icon-dmg",
+        "application/vnd.google-apps.shortcut": "icon-link",
         "image/bmp": "icon-img",
         "image/jpeg": "icon-img",
         "image/png": "icon-img",
+        "image/gif": "icon-img",
       },
       headmd: { display: false, file: {}, path: "" },
       readmemd: { display: false, file: {}, path: "" },
@@ -127,32 +146,8 @@ export default {
   },
   computed: {
     ...mapState("acrou/view", ["mode"]),
-    buildFiles() {
-      var path = this.$route.path;
-      return this.files
-        .map((item) => {
-          var p = path + checkoutPath(item.name, item);
-          let isFolder = item.mimeType === "application/vnd.google-apps.folder";
-          let size = isFolder ? "-" : formatFileSize(item.size);
-          return {
-            path: p,
-            ...item,
-            modifiedTime: formatDate(item.modifiedTime),
-            size: size,
-            isFolder: isFolder,
-          };
-        })
-        .sort((a, b) => {
-          if (a.isFolder && b.isFolder) {
-            return 0;
-          }
-          return a.isFolder ? -1 : 1;
-        });
-    },
     images() {
-      return this.buildFiles.filter(
-        (file) => file.mimeType.indexOf("image") != -1
-      );
+      return this.files.filter((file) => file.mimeType.startsWith("image/"));
     },
     renderHeadMD() {
       return window.themeOptions.render.head_md || false;
@@ -165,17 +160,17 @@ export default {
     this.render();
   },
   methods: {
-    pageLoad() {
-      if (!this.page.page_token) return;
-      this.page.page_index++;
-      this.render("scroll");
-    },
-    render(scroll) {
-      if (scroll) {
-        this.busy = true;
-      } else {
-        this.loading = true;
+    ...mapActions("acrou/aplayer", ["add"]),
+    ...mapActions("acrou/db", ["set"]),
+    infiniteHandler($state) {
+      // 首次进入页面不执行滚动事件
+      if (!this.page.page_token) {
+        return;
       }
+      this.page.page_index++;
+      this.render($state);
+    },
+    render($state) {
       this.headmd = { display: false, file: {}, path: "" };
       this.readmemd = { display: false, file: {}, path: "" };
       var path = this.$route.path;
@@ -202,25 +197,50 @@ export default {
               page_token: body.nextPageToken,
               page_index: body.curPageIndex,
             };
-            try {
-              if (scroll) {
-                this.files = this.files.concat(data.files);
-              } else {
-                this.files = data.files;
-              }
+            if ($state) {
+              this.files.push(...this.buildFiles(data.files));
+            } else {
+              this.files = this.buildFiles(data.files);
+            }
+            if (data.files) {
               this.renderMd(data.files, path);
-            } catch (e) {
-              console.log(e);
             }
           }
+          if (body.nextPageToken) {
+            this.$refs.infinite.stateChanger.loaded();
+          } else {
+            this.$refs.infinite.stateChanger.complete();
+          }
           this.loading = false;
-          this.busy = false;
         })
         .catch(() => {
           this.loading = false;
-          this.busy = false;
-          this.$router.go(-1);
         });
+    },
+    buildFiles(files) {
+      var path = this.$route.path;
+      return !files
+        ? []
+        : files
+            .map((item) => {
+              var p = path + checkoutPath(item.name, item);
+              let isFolder =
+                item.mimeType === "application/vnd.google-apps.folder";
+              let size = isFolder ? "-" : formatFileSize(item.size);
+              return {
+                path: p,
+                ...item,
+                modifiedTime: formatDate(item.modifiedTime),
+                size: size,
+                isFolder: isFolder,
+              };
+            })
+            .sort((a, b) => {
+              if (a.isFolder && b.isFolder) {
+                return 0;
+              }
+              return a.isFolder ? -1 : 1;
+            });
     },
     checkPassword(path) {
       var pass = prompt(this.$t("list.auth"), "");
@@ -234,20 +254,7 @@ export default {
     copy(path) {
       let origin = window.location.origin;
       path = origin + encodeURI(path);
-      this.$copyText(path)
-        .then(() => {
-          this.$notify({
-            title: this.$t("notify.title"),
-            message: this.$t("copy.success"),
-            type: "success",
-          });
-        })
-        .catch(() => {
-          this.$notify.error({
-            title: this.$t("notify.title"),
-            message: this.$t("copy.error"),
-          });
-        });
+      this.$copyText(path);
     },
     thum(url) {
       return url ? `/${this.$route.params.id}:view?url=${url}` : "";
@@ -255,8 +262,24 @@ export default {
     inited(viewer) {
       this.$viewer = viewer;
     },
-    go(file, target) {
-      if (file.mimeType.indexOf("image") != -1) {
+    action(file, target, isSearch = true) {
+      // If it is a shortcut, the prompt cannot be downloaded
+      if (file.mimeType === "application/vnd.google-apps.shortcut") {
+        this.$notify({
+          title: "notify.title",
+          message: "error.shortcut_not_down",
+          type: "warning",
+        });
+        return;
+      }
+
+      let cmd = this.$route.params.cmd;
+      if (cmd && cmd === "search" && isSearch) {
+        this.goSearchResult(file, target);
+        return;
+      }
+
+      if (file.mimeType.startsWith("image/") && target === "view") {
         this.viewer = true;
         this.$nextTick(() => {
           let index = this.images.findIndex((item) => item.path === file.path);
@@ -264,24 +287,48 @@ export default {
         });
         return;
       }
-      let path = file.path;
-      let cmd = this.$route.params.cmd;
-      if (cmd && cmd === "search") {
-        this.goSearchResult(file, target);
+      if (
+        file.mimeType.startsWith("audio/") &&
+        file.mimeType.indexOf("mpegurl") == -1 &&
+        target === "view"
+      ) {
+        if (window.aplayer) {
+          this.add({
+            audio: {
+              id: file.id,
+              name: file.name,
+              artist: "none",
+              url: file.path,
+            },
+            play: true,
+          });
+        }
         return;
       }
+      this.target(file, target);
+    },
+    target(file, target) {
+      let path = file.path;
       if (target === "_blank") {
         window.open(path);
         return;
       }
+      if (target === "copy") {
+        this.copy(path);
+        return;
+      }
       if (target === "down" || (!checkExtends(path) && !file.isFolder)) {
-        let temp_path = this.$route.params.path ? this.$route.params.path : "";
-        location.href = `/${this.$route.params.id}:down/${temp_path}/${file.name}`;
+        location.href = path.replace(/^\/(\d+:)\//, "/$1down/");
         return;
       }
       if (target === "view") {
+        let checkViewPath = checkView(path);
+        this.set({
+          path: `page.${checkViewPath}`,
+          value: file,
+        });
         this.$router.push({
-          path: checkView(path),
+          path: checkViewPath,
         });
         return;
       }
@@ -318,22 +365,15 @@ export default {
     },
     goSearchResult(file, target) {
       this.loading = true;
-      let cur = window.current_drive_order;
-      axios
-        .post(`/${cur}:id2path`, { id: file.id })
+      let id = this.$route.params.id;
+      this.axios
+        .post(`/${id}:id2path`, { id: file.id })
         .then((res) => {
           this.loading = false;
           let data = res.data;
           if (data) {
-            var href = checkoutPath(data, file);
-            href = `/${cur}:${data}`;
-            if (target === "_blank") {
-              window.open(href);
-            } else {
-              this.$router.push({
-                path: checkView(href),
-              });
-            }
+            file.path = `/${id}:${data}`;
+            this.action(file, target, false);
           }
         })
         .catch((e) => {
@@ -342,7 +382,7 @@ export default {
         });
     },
     getIcon(type) {
-      return "#" + (this.icon[type] ? this.icon[type] : "icon-weizhi");
+      return "#" + (this.icon[type] ? this.icon[type] : "icon-file");
     },
   },
 };

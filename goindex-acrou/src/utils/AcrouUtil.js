@@ -1,4 +1,4 @@
-import axios from "@utils/axios";
+import axios from "@/plugin/axios";
 let Base64 = require("js-base64").Base64;
 
 const text_exts = [
@@ -13,7 +13,7 @@ const text_exts = [
   "sh",
   "md",
 ];
-const video_exts = ["mp4", "webm", "mkv", "m3u8"];
+const video_exts = ["mp4", "webm", "mkv", "m3u8", "flv", "mov", "m4v"];
 const image_exts = ["bmp", "jpg", "jpeg", "png", "gif"];
 const pdf_exts = ["pdf"];
 
@@ -76,7 +76,7 @@ export const checkExtends = (path) => {
     .split(".")
     .pop()
     .toLowerCase();
-  let exts = text_exts.concat(...video_exts,...image_exts,...pdf_exts);
+  let exts = text_exts.concat(...video_exts, ...image_exts, ...pdf_exts);
   return exts.indexOf(`${ext}`) != -1;
 };
 
@@ -88,11 +88,10 @@ export const decode64 = (str) => {
   return Base64.decode(str);
 };
 
-export function get_file(option, callback) {
-  var path = option.path;
-  var modifiedTime = option.file.modifiedTime;
+export function get_file({ path, file }, callback) {
+  var modifiedTime = file ? file.modifiedTime : null;
   var key = "file_path_" + path + modifiedTime;
-  var data = localStorage.getItem(key);
+  var data = modifiedTime ? localStorage.getItem(key) : null;
   if (data) {
     return callback(data);
   } else {
