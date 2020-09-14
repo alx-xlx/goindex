@@ -32,7 +32,7 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 
 Worker Script (Dark Mode) : [index.js](https://github.com/alx-xlx/goindex/blob/2.0.8-darkmode-0.1/goindex-acrou/go2index/index.js)
 
-<!-- Worker Script (Multiple Google Accounts) : [index-multiple-accounts.js](https://github.com/alx-xlx/goindex/blob/master/goindex-acrou/go2index/index-multiple-accounts.js) -->
+Worker Script (Multiple Google Accounts) : [index-multiple-accounts.js](https://github.com/alx-xlx/goindex/blob/master/goindex-acrou/go2index/index-multiple-accounts.js)
 
 Demo - [goindex.teamsdrives.workers.dev](https://goindex.teamsdrives.workers.dev)
 
