@@ -30,13 +30,13 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 ## 1. [Aicirou/goindex-theme-acrou](https://github.com/Aicirou/goindex-theme-acrou)
 
 
-Worker Script (Dark Mode) : [index.js](https://github.com/alx-xlx/goindex/blob/2.0.8-darkmode-0.1/goindex-acrou/go2index/index.js)
+Worker Script (Dark Mode) : [index.js](https://raw.githubusercontent.com/alx-xlx/goindex/31fabf3d7ff221ff34aaaf23e63a1a5a49e40b4f/goindex-acrou/go2index/index.js)
 
 Worker Script (Multiple Google Accounts) : [index-multiple-accounts.js](https://github.com/alx-xlx/goindex/blob/master/goindex-acrou/go2index/index-multiple-accounts.js)
 
 Demo - [goindex.teamsdrives.workers.dev](https://goindex.teamsdrives.workers.dev)
 
-Copy the [index.js](https://github.com/alx-xlx/goindex/blob/2.0.8-darkmode-0.1/goindex-acrou/go2index/index.js) script to [workers.dev](https://workers.cloudflare.com/) and edit `client_id`, `client_secret`, `refresh_token` with yours
+Copy the [index.js](https://raw.githubusercontent.com/alx-xlx/goindex/31fabf3d7ff221ff34aaaf23e63a1a5a49e40b4f/goindex-acrou/go2index/index.js) script to [workers.dev](https://workers.cloudflare.com/) and edit `client_id`, `client_secret`, `refresh_token` with yours
 
 OR
 
