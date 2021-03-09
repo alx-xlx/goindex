@@ -1,7 +1,5 @@
 ﻿<div align="center">
-<h1>goindex</h1>
-<img src="https://github.com/alx-xlx/goindex/raw/master/themes/logo.png" alt="goindex" height="">
-
+<img src="https://i.imgur.com/7iC0dbz.png" alt="goindex" height="">
 </div>
 <div align="center">
 
@@ -12,6 +10,8 @@
 <img alt="goindex-softwareheritage.org" src="https://archive.softwareheritage.org/badge/origin/https://github.com/Unipisa/CMM/"/>
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/alx-xlx/goindex">
 <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Falx-xlx%2Fgoindex&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false"/>
+
+
 
 </div>
 
@@ -50,6 +50,8 @@ Simply visit [this](https://goindex.glitch.me/) Modified (only for Dark Mode) ve
 
 ### [Thumbnail View - Dark Mode](https://goindex.teamsdrives.workers.dev)
 ![goindex-thumbnail](https://i.imgur.com/crg4dGp.gif)
+
+![goindex-awesome](https://i.imgur.com/JnEvGyg.gif)
 
 ### Toggle View
 ![goindex-toggle-view](https://i.imgur.com/RdvgfIf.png)
@@ -215,3 +217,7 @@ goindex-theme-acrou - [Aicirou](https://github.com/Aicirou/goindex-theme-acrou)
 GDIndex - [maple3142](https://github.com/maple3142/GDIndex)
 
 goindex - [donwa](https://github.com/donwa/goindex)
+
+<div align="center">
+<img src="https://i.imgur.com/jTGlxeV.png" alt="goindex" height="">
+</div>
