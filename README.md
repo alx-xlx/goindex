@@ -62,6 +62,23 @@ Simply visit [this](https://goindex.glitch.me/) Modified (only for Dark Mode) ve
 ---
 Worker Script - [index.js](https://github.com/alx-xlx/goindex/blob/2.0.8-darkmode-0.1/goindex-vue.js)
 
+### Upload Files using CLI `gdindex_upload.py`
+```py
+## Python Example
+import requests
+
+to_upload = "https://i.imgur.com/8w2KDrG.gif"
+# "upload: true" in the script
+baseURL = "https://gdindex-dark.teamsdrives.workers.dev/"
+fileName = "goindex.gif"
+# "folder1/folder2/goindex.gif"
+teamDriveID = "0ANCHcQq-8cmvUk9PVA"
+
+URL = baseURL + "/" + fileName + "?rootId=" + teamDriveID + "&url=" + to_upload
+r = requests.put(URL)
+print(r.text)
+```
+
 Demo - [gdindex-dark.teamsdrives.workers.dev](https://gdindex-dark.teamsdrives.workers.dev/)
 ### [Demo - Dark Mode](https://gdindex-dark.teamsdrives.workers.dev/)
 ![](https://i.imgur.com/1uIQZr5.png)
