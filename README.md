@@ -72,7 +72,7 @@ to_upload = "https://i.imgur.com/8w2KDrG.gif"
 baseURL = "https://gdindex-dark.teamsdrives.workers.dev/"
 fileName = "goindex.gif"
 # "folder1/folder2/goindex.gif"
-teamDriveID = "0ANCHcQq-8cmvUk9PVA"
+teamDriveID = "0ANCHcQq-8cmvUk9PVA" # Default - "root"
 
 URL = baseURL + "/" + fileName + "?rootId=" + teamDriveID + "&url=" + to_upload
 r = requests.put(URL)
