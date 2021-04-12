@@ -586,7 +586,7 @@ var authConfig = {
       params.q = `'${parent}' in parents and trashed = false AND name !='.password'`;
       params.orderBy = "folder,name,modifiedTime desc";
       params.fields =
-        "nextPageToken, files(name, mimeType, size , modifiedTime, thumbnailLink, description)";
+        "nextPageToken, files(id, name, mimeType, size , modifiedTime, thumbnailLink, description)";
       params.pageSize = this.authConfig.files_list_page_size;
   
       if (page_token) {
@@ -701,7 +701,7 @@ var authConfig = {
       }
       params.q = `trashed = false AND name !='.password' AND (${name_search_str})`;
       params.fields =
-        "nextPageToken, files(name, mimeType, size , modifiedTime, thumbnailLink, description)";
+        "nextPageToken, files(id, name, mimeType, size , modifiedTime, thumbnailLink, description)";
       params.pageSize = this.authConfig.search_result_list_page_size;
       // params.orderBy = 'folder,name,modifiedTime desc';
   
