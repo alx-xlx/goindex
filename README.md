@@ -6,6 +6,7 @@
 <img alt="goindex-license" src="https://img.shields.io/badge/Open_source-MIT-red.svg?logo=git&logoColor=green"/>
 <img src="https://img.shields.io/github/last-commit/alx-xlx/goindex.svg?logo=Sublime+Text&logoColor=green&label=Active"/>
 <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/alx-xlx/goindex">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/alx-xlx/goindex">
 <img alt="goindex-softwareheritage.org" src="https://archive.softwareheritage.org/badge/origin/https://github.com/Unipisa/CMM/"/>
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/alx-xlx/goindex">
 <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Falx-xlx%2Fgoindex&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false"/>
@@ -29,13 +30,13 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 ## 1. [Aicirou/goindex-theme-acrou](https://github.com/Aicirou/goindex-theme-acrou)
 
 
-Worker Script (Dark Mode) : [index.js](https://raw.githubusercontent.com/alx-xlx/goindex/31fabf3d7ff221ff34aaaf23e63a1a5a49e40b4f/goindex-acrou/go2index/index.js)
+Worker Script (Dark Mode) : [index.js](https://raw.githubusercontent.com/alx-xlx/goindex/master/goindex-acrou/go2index/index.js)
 
-Worker Script (Multiple Google Accounts) : [index-multiple-accounts.js](https://github.com/alx-xlx/goindex/blob/master/goindex-acrou/go2index/index-multiple-accounts.js)
+Worker Script (Multiple Google Accounts) : [index-multiple-accounts.js](https://raw.githubusercontent.com/alx-xlx/goindex/master/goindex-acrou/go2index/index-multiple-accounts.js)
 
 Demo - [goindex.teamsdrives.workers.dev](https://goindex.teamsdrives.workers.dev)
 
-Copy the [index.js](https://raw.githubusercontent.com/alx-xlx/goindex/31fabf3d7ff221ff34aaaf23e63a1a5a49e40b4f/goindex-acrou/go2index/index.js) script to [workers.dev](https://workers.cloudflare.com/) and edit `client_id`, `client_secret`, `refresh_token` with yours
+Copy the [index.js](https://raw.githubusercontent.com/alx-xlx/goindex/master/goindex-acrou/go2index/index.js) script to [workers.dev](https://workers.cloudflare.com/) and edit `client_id`, `client_secret`, `refresh_token` with yours
 
 OR
 
