@@ -1,5 +1,5 @@
 ﻿<div align="center">
-<img src="https://i.imgur.com/7iC0dbz.png" alt="goindex" height="">
+<img src="https://i.imgur.com/ucUTdrZ.png" alt="goindex" height="">
 </div>
 <div align="center">
 
@@ -67,12 +67,14 @@ Worker Script - [index.js](https://github.com/alx-xlx/goindex/blob/2.0.8-darkmod
 ## Python Example
 import requests
 
-to_upload = "https://i.imgur.com/8w2KDrG.gif"
 # "upload: true" in the script
+to_upload = "https://i.imgur.com/8w2KDrG.gif"
 baseURL = "https://gdindex-dark.teamsdrives.workers.dev/"
-fileName = "goindex.gif"
 # "folder1/folder2/goindex.gif"
-teamDriveID = "0ANCHcQq-8cmvUk9PVA" # Default - "root"
+# Subdirectories of Folder in Google Drive
+fileName = "folder1/folder2/goindex.gif"
+# Default teamDriveID is "root"
+teamDriveID = "0ANCHcQq-8cmvUk9PVA"
 
 URL = baseURL + "/" + fileName + "?rootId=" + teamDriveID + "&url=" + to_upload
 r = requests.put(URL)
@@ -116,7 +118,7 @@ Get free Google Shared Drives
 - [team.hackgence.com](https://team.hackgence.com)
 
 ## Quick Deployment  
-1.Open https://installen.gd.workers.dev/  
+1.Open https://goindex.glitch.me/  
 2.Auth and get the code  
 3.Deploy the code to [Cloudflare Workers](https://www.cloudflare.com/)  
 
