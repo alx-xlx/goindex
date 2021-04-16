@@ -122,6 +122,35 @@ Get free Google Shared Drives
 2.Auth and get the code  
 3.Deploy the code to [Cloudflare Workers](https://www.cloudflare.com/)  
 
+## To Get Search Bar Working
+
+If you're using your root folder Set Roots like this
+
+`  "roots": [
+	{
+		"id": "root",
+		"name": "{Name}",
+		"user": "",
+		"pass": "",
+		"protect_file_link": false
+	}
+], `
+
+If you're using your Team Drive Set Roots like this!
+
+`  "roots": [
+	{
+		"id": "{Your Team Drive ID}",
+		"name": "Nexa Torrents",
+		"user": "",
+		"pass": "",
+		"protect_file_link": false
+	}
+], `
+
+**Don't use your Team Drive Folder Id** . Use Your **Team Drive ID**
+Ex:- If your Team Drive Link is `https://drive.google.com/drive/u/0/folders/0AJOMLOnArqblUk9PVA` . Your Team Drive Id is `0AJOMLOnArqblUk9PVA`
+
 # Optional
 Use this when you want to host everything
 
