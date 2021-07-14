@@ -184,7 +184,7 @@ export default {
     },
     players() {
       return [
-        {
+        <!-- {
           name: "IINA",
           icon: this.$cdnpath("images/player/iina.png"),
           scheme: "iina://weblink?url=" + this.videoUrl,
@@ -193,12 +193,7 @@ export default {
           name: "PotPlayer",
           icon: this.$cdnpath("images/player/potplayer.png"),
           scheme: "potplayer://" + this.videoUrl,
-        },
-        {
-          name: "VLC",
-          icon: this.$cdnpath("images/player/vlc.png"),
-          scheme: "vlc://" + this.videoUrl,
-        },
+        }, 
         {
           name: "Thunder",
           icon: this.$cdnpath("images/player/thunder.png"),
@@ -214,6 +209,13 @@ export default {
           icon: this.$cdnpath("images/player/nplayer.png"),
           scheme: "nplayer-" + this.videoUrl,
         },
+        -->
+        {
+          name: "VLC",
+          icon: this.$cdnpath("images/player/vlc.png"),
+          scheme: "vlc://" + this.videoUrl,
+        },
+      
         {
           name: "MXPlayer(Free)",
           icon: this.$cdnpath("images/player/mxplayer.png"),
