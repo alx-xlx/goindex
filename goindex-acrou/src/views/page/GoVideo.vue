@@ -184,32 +184,34 @@ export default {
     },
     players() {
       return [
-        <!-- {
-          name: "IINA",
-          icon: this.$cdnpath("images/player/iina.png"),
-          scheme: "iina://weblink?url=" + this.videoUrl,
-        },
-        {
-          name: "PotPlayer",
-          icon: this.$cdnpath("images/player/potplayer.png"),
-          scheme: "potplayer://" + this.videoUrl,
-        }, 
-        {
-          name: "Thunder",
-          icon: this.$cdnpath("images/player/thunder.png"),
-          scheme: "thunder://" + this.getThunder,
-        },
-        {
-          name: "Aria2",
-          icon: this.$cdnpath("images/player/aria2.png"),
-          scheme: 'javascript:alert("暂未实现")',
-        },
-        {
-          name: "nPlayer",
-          icon: this.$cdnpath("images/player/nplayer.png"),
-          scheme: "nplayer-" + this.videoUrl,
-        },
-        -->
+     /**
+       *{
+       *  name: "IINA",
+       *  icon: this.$cdnpath("images/player/iina.png"),
+       *  scheme: "iina://weblink?url=" + this.videoUrl,
+       *},
+       *{
+       *  name: "PotPlayer",
+       *  icon: this.$cdnpath("images/player/potplayer.png"),
+       *  scheme: "potplayer://" + this.videoUrl,
+       *}, 
+       *{
+       *  name: "Thunder",
+       *  icon: this.$cdnpath("images/player/thunder.png"),
+       *  scheme: "thunder://" + this.getThunder,
+       *},
+       *{
+       *  name: "Aria2",
+       *  icon: this.$cdnpath("images/player/aria2.png"),
+       *  scheme: 'javascript:alert("暂未实现")',
+       *},
+       *{
+       *  name: "nPlayer",
+       *  icon: this.$cdnpath("images/player/nplayer.png"),
+       *  scheme: "nplayer-" + this.videoUrl,
+       * },
+       */
+        
         {
           name: "VLC",
           icon: this.$cdnpath("images/player/vlc.png"),
