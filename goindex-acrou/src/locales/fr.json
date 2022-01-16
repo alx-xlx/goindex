@@ -1,0 +1,61 @@
+{
+  "_name": "Français",
+  "languages": "Langues",
+  "index": "Accueil",
+  "folder": "Dossier",
+  "notify": {
+    "title": "Notifier"
+  },
+  "copy": {
+    "text": "Copier",
+    "success": "Copie réussie",
+    "error": "Copie ratée"
+  },
+  "list": {
+    "view": {
+      "gridMode": "Affichage grille",
+      "listMode": "Affichage liste"
+    },
+    "auth": "Répertoire chiffré, veuillez entrer le mot de passe",
+    "title": {
+      "file": "Fichier",
+      "moditime": "Date de modification",
+      "size": "Taille",
+      "operation": "Actions"
+    },
+    "loading": "Chargement...",
+    "opt": {
+      "copy": "Copier lien",
+      "newTab": "Ouvrir dans un nouvel onglet",
+      "download": "Télécharger"
+    },
+    "total": "Total",
+    "item": "objets"
+  },
+  "search": {
+    "placeholder": "Rechercher des ressources..."
+  },
+  "page": {
+    "video": {
+      "play": "Lecture",
+      "download": "Télécharger",
+      "link": "Lien de téléchargement"
+    },
+    "text": {
+      "loading": "Chargement..."
+    }
+  },
+  "setting": {
+    "clear": {
+      "text": "Vider le cache",
+      "success": "Cache nettoyé avec succès"
+    }
+  },
+  "checkVersion": {
+    "tips": "Nouvelle version détectée, <a href='${url}'>Aller sur GitHub</a>"
+  },
+  "error": {
+    "shortcut_not_down": "Le raccourci ne peux être ouvert/téléchargé",
+    "401": "Non autorisé, veuillez vous connecter"
+  }
+}
