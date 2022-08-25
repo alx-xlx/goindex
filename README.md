@@ -27,7 +27,7 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 # Versions
 
 
-## 1. [Aicirou/goindex-theme-acrou](https://github.com/Aicirou/goindex-theme-acrou)
+## 1. [Achrou/goindex-theme-acrou](https://github.com/Achrou/goindex-theme-acrou)
 
 
 Worker Script (Dark Mode) : [index.js](https://raw.githubusercontent.com/alx-xlx/goindex/master/goindex-acrou/go2index/index.js)
@@ -260,7 +260,7 @@ Cloudflare Workers allow you to write JavaScript which runs on all of Cloudflare
 
 ## Credits - Original Authors
 
-goindex-theme-acrou - [Aicirou](https://github.com/Aicirou/goindex-theme-acrou)
+goindex-theme-acrou - [Achrou](https://github.com/Achrou/goindex-theme-acrou)
 
 GDIndex - [maple3142](https://github.com/maple3142/GDIndex)
 
