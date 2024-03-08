@@ -4,12 +4,12 @@
 <div align="center">
 
 <img alt="goindex-license" src="https://img.shields.io/badge/Open_source-MIT-red.svg?logo=git&logoColor=green"/>
-<img src="https://img.shields.io/github/last-commit/alx-xlx/goindex.svg?logo=Sublime+Text&logoColor=green&label=Active"/>
-<img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/alx-xlx/goindex">
-<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/alx-xlx/goindex">
+<img src="https://img.shields.io/github/last-commit/jackthenewbie/goindex.svg?logo=Sublime+Text&logoColor=green&label=Active"/>
+<img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/jackthenewbie/goindex">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jackthenewbie/goindex">
 <img alt="goindex-softwareheritage.org" src="https://archive.softwareheritage.org/badge/origin/https://github.com/Unipisa/CMM/"/>
-<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/alx-xlx/goindex">
-<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Falx-xlx%2Fgoindex&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false"/>
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/jackthenewbie/goindex">
+<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fjackthenewbie%2Fgoindex&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Views&edge_flat=false"/>
 
 
 
@@ -30,13 +30,13 @@ Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and
 ## 1. [Achrou/goindex-theme-acrou](https://github.com/Achrou/goindex-theme-acrou)
 
 
-Worker Script (Dark Mode) : [index.js](https://raw.githubusercontent.com/alx-xlx/goindex/master/goindex-acrou/go2index/index.js)
+Worker Script (Dark Mode) : [index.js](https://raw.githubusercontent.com/jackthenewbie/goindex/master/goindex-acrou/go2index/index.js)
 
-Worker Script (Multiple Google Accounts) : [index-multiple-accounts.js](https://raw.githubusercontent.com/alx-xlx/goindex/master/goindex-acrou/go2index/index-multiple-accounts.js)
+Worker Script (Multiple Google Accounts) : [index-multiple-accounts.js](https://raw.githubusercontent.com/jackthenewbie/goindex/master/goindex-acrou/go2index/index-multiple-accounts.js)
 
 Demo - [goindex.teamsdrives.workers.dev](https://goindex.teamsdrives.workers.dev)
 
-Copy the [index.js](https://raw.githubusercontent.com/alx-xlx/goindex/master/goindex-acrou/go2index/index.js) script to [workers.dev](https://workers.cloudflare.com/) and edit `client_id`, `client_secret`, `refresh_token` with yours
+Copy the [index.js](https://raw.githubusercontent.com/jackthenewbie/goindex/master/goindex-acrou/go2index/index.js) script to [workers.dev](https://workers.cloudflare.com/) and edit `client_id`, `client_secret`, `refresh_token` with yours
 
 OR
 
@@ -60,7 +60,7 @@ Simply visit [this](https://goindex.glitch.me/) Modified (only for Dark Mode) ve
 ---
 ## 2. [maple3142/GDIndex](https://github.com/maple3142/GDIndex)
 ---
-Worker Script - [index.js](https://github.com/alx-xlx/goindex/blob/2.0.8-darkmode-0.1/goindex-vue.js)
+Worker Script - [index.js](https://github.com/jackthenewbie/goindex/blob/2.0.8-darkmode-0.1/goindex-vue.js)
 
 ### Upload Files using CLI `gdindex_upload.py`
 ```py
@@ -87,7 +87,7 @@ Demo - [gdindex-dark.teamsdrives.workers.dev](https://gdindex-dark.teamsdrives.w
 
 ## 3. donwa/goindex
 
-Workers Script - [index.js](https://github.com/alx-xlx/goindex/blob/2.0.8-darkmode-0.1/goindex.js)
+Workers Script - [index.js](https://github.com/jackthenewbie/goindex/blob/2.0.8-darkmode-0.1/goindex.js)
 
 ## Themes
 
@@ -246,7 +246,7 @@ src="//cdn.jsdelivr.net/combine/gh/jquery/jquery/dist/jquery.min.js,gh/<USERNAME
 Example :
 
 ```
-src="//cdn.jsdelivr.net/combine/gh/jquery/jquery/dist/jquery.min.js,gh/alx-xlx/goindex@${authConfig.hash}/themes/${authConfig.theme}/app.js"
+src="//cdn.jsdelivr.net/combine/gh/jquery/jquery/dist/jquery.min.js,gh/jackthenewbie/goindex@${authConfig.hash}/themes/${authConfig.theme}/app.js"
 ```
 
 ## Change Icons

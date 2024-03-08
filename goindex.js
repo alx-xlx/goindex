@@ -19,7 +19,7 @@ var authConfig = {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
     <title>${authConfig.siteName}</title>
-    <script src="//cdn.jsdelivr.net/combine/gh/jquery/jquery/dist/jquery.min.js,gh/alx-xlx/goindex@${authConfig.hash}/themes/${authConfig.theme}/app.js"></script>
+    <script src="//cdn.jsdelivr.net/combine/gh/jquery/jquery/dist/jquery.min.js,gh/jackthenewbie/goindex@${authConfig.hash}/themes/${authConfig.theme}/app.js"></script>
   </head>
   <body>
   </body>
